@@ -46,7 +46,7 @@ router.post("/", function (req, res, next) {
   if (!todo.text || !(todo.isCompleted + "")) {
     res.status(400);
     res.json({
-      error: "Invalid Data",
+      error: "Invalid Data Input",
     });
   } else {
     db.todo.save(todo, function (err, result) {
